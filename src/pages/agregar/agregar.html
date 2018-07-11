@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Agregar platillo</ion-title>
+
+    <button ion-button clear item-end (tap)="close()">Cerrar</button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+    
+      <ion-item>
+        <ion-label fixed>Nombre</ion-label>
+        <ion-input [(ngModel)]="nombre" type="text" value=""></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label fixed>Sabor</ion-label>
+        <ion-input [(ngModel)]="tipo" type="text"></ion-input>
+      </ion-item>
+    
+     
+      <ion-item *ngIf="imagePreview" >
+        <img [src]="imagePreview">
+      </ion-item>
+    
+      <button ion-button block (tap)="agregarPlatillo()">Agregar</button>
+      <button ion-button block (tap)="showCamera()">Camara</button>
+      <button ion-button block (tap)="galeria()">Galeria</button>
+    </ion-list>
+
+</ion-content>

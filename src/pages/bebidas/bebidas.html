@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Bebidas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-list *ngFor="let bebida of bebidas | async">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src = {{bebida.img}}>
+          </ion-thumbnail>
+          <h2>{{bebida.nombre}}</h2>
+          <p>{{bebida.sabor}}, Precio:{{bebida.precio}} </p> 
+          
+          <button ion-button clear item-end>View</button>
+        </ion-item>
+      </ion-list>
+    
+
+</ion-content>
